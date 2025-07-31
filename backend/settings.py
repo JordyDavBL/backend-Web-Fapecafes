@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-^&&vs@4$%sswjvok*m+jyln8v0aop(b_rok_b$1p&oj8kp#$ii
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.onrender.com']
+ALLOWED_HOSTS = ['https://backend-web-fapecafes.onrender.com']
 
 
 # Application definition
@@ -72,7 +72,9 @@ MIDDLEWARE = [
 ]
 
 # Configuración de CORS
-CORS_ALLOW_ALL_ORIGINS = True  # Sólo para desarrollo, en producción especifica los orígenes
+CORS_ALLOWED_ORIGINS = [
+    "https://jordydavbl.github.io",
+]
 
 ROOT_URLCONF = 'backend.urls'
 
