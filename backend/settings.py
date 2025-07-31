@@ -74,7 +74,10 @@ MIDDLEWARE = [
 # Configuración de CORS
 CORS_ALLOWED_ORIGINS = [
     "https://jordydavbl.github.io",
+    "https://jordydavbl.github.io/frontend-Web-Fapecafes",
 ]
+
+CORS_ALLOW_CREDENTIALS = True
 
 ROOT_URLCONF = 'backend.urls'
 
