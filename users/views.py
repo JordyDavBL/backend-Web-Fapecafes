@@ -2800,7 +2800,7 @@ def lotes_disponibles_para_proceso(request):
     try:
         # ✅ INCLUIR LOTES CON SEPARACIÓN APLICADA
         # Estos lotes han completado el análisis y tienen su parte limpia lista para procesar
-        estados_disponibles = ['APROBADO', 'SEPARACION_APLICADA']
+        estados_disponibles = ['APROBADO', 'SEPARACION_APLICADA', 'EN_PROCESO']
         
         lotes = LoteCafe.objects.filter(
             estado__in=estados_disponibles
