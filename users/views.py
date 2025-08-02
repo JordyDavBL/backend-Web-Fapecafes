@@ -146,7 +146,7 @@ def seleccionar_muestras(request):
                 muestras_creadas.append(muestra)
             
             # Actualizar estado del lote
-            lote.estado = 'EN_PROCESO'
+            lote.estado = 'APROBADO'
             lote.save()
             
             # Registrar acción en bitácora
@@ -2800,7 +2800,7 @@ def lotes_disponibles_para_proceso(request):
     try:
         # ✅ INCLUIR LOTES CON SEPARACIÓN APLICADA
         # Estos lotes han completado el análisis y tienen su parte limpia lista para procesar
-        estados_disponibles = ['APROBADO', 'SEPARACION_APLICADA', 'EN_PROCESO']
+        estados_disponibles = ['APROBADO', 'SEPARACION_APLICADA']
         
         lotes = LoteCafe.objects.filter(
             estado__in=estados_disponibles
